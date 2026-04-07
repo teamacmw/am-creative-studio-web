@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import { Analytics } from "@vercel/analytics/react";
 import {
   ArrowUpRight, Star, Sparkles, Zap, Heart, CheckCircle2,
   Send, Bug, Lightbulb, Shield, Mail, ChevronRight, ChevronLeft,
@@ -1612,6 +1613,7 @@ export default function App() {
       <ScrollProgressBar visible={!!selectedApp} />
       <div style={{ position: "relative", zIndex: 2 }}>{page}</div>
       <Footer setRoute={setRoute} clearApp={clearApp} />
+      <Analytics />
     </div>
   );
 }
